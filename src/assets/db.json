@@ -1,0 +1,55 @@
+{
+  "members": [
+    {
+      "cin": "1111",
+      "name": "Yosr",
+      "type": "student",
+      "createdDate": "30/01/2025",
+      "id": "123"
+    },
+    {
+      "id": "665",
+      "cin": "1212",
+      "name": "Amine",
+      "type": "student",
+      "createdDate": "20/01/2025"
+    },
+    {
+      "id": "d2d6",
+      "cin": "1212",
+      "name": "Ahmed",
+      "type": "Student",
+      "createdDate": "12/12/2001"
+    }
+  ],
+  "evts": [
+    {
+      "id": "12345",
+      "titre": "conf",
+      "dateDebut": "12/12/2024",
+      "dateFin": "12/12/2024",
+      "lieu": "Sfax"
+    },
+    {
+      "id": "54321",
+      "titre": "journée scientifique",
+      "dateDebut": "10/10/2024",
+      "dateFin": "11/11/2024",
+      "lieu": "Tunis"
+    },
+    {
+      "id": "12345",
+      "titre": "conf",
+      "dateDebut": "12/12/2024",
+      "dateFin": "12/12/2024",
+      "lieu": "Sfax"
+    },
+    {
+      "id": "54321",
+      "titre": "journée scientifique",
+      "dateDebut": "10/10/2024",
+      "dateFin": "11/11/2024",
+      "lieu": "Tunis"
+    }
+  ]
+}
