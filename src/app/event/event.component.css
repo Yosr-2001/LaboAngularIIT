@@ -1,3 +1,28 @@
 button {
     color: red;
 }
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1px 0;
+}
+
+.create-button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 2px;
+}
+
+.create-button:hover {
+    background-color: #333;
+}

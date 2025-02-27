@@ -24,13 +24,6 @@
   ],
   "evts": [
     {
-      "id": "12345",
-      "titre": "conf",
-      "dateDebut": "12/12/2024",
-      "dateFin": "12/12/2024",
-      "lieu": "Sfax"
-    },
-    {
       "id": "54321",
       "titre": "journée scientifique",
       "dateDebut": "10/10/2024",
@@ -50,6 +43,13 @@
       "dateDebut": "10/10/2024",
       "dateFin": "11/11/2024",
       "lieu": "Tunis"
+    },
+    {
+      "id": "05fa",
+      "titre": "Conference",
+      "dateDebut": "27/02/2025",
+      "dateFin": "28/02/2025",
+      "lieu": "Sfax"
     }
   ]
 }

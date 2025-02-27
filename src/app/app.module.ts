@@ -31,6 +31,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ModalEvtComponent } from './modal-evt/modal-evt.component';
 /*** */
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MatTableDataSource } from '@angular/material/table';
     DashboardComponent,
     EventComponent,
     ArticleComponent,
-    ToolComponent
+    ToolComponent,
+    ModalEvtComponent
   ],
   imports: [
     BrowserModule,

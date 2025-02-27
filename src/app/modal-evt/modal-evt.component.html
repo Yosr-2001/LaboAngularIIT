@@ -1,0 +1,22 @@
+<mat-dialog-content [formGroup]="form">
+
+    <mat-form-field>
+        <input matInput placeholder="titre" formControlName="titre">
+    </mat-form-field><br>
+
+    <mat-form-field>
+        <input matInput placeholder="dateDebut" formControlName="dateDebut">
+        <!--formControlName on va sauvegarder le contenu dans le ts-->
+    </mat-form-field><br>
+    <mat-form-field>
+        <input matInput placeholder="dateFin" formControlName="dateFin">
+    </mat-form-field><br>
+    <mat-form-field>
+        <input matInput placeholder="lieu" formControlName="lieu">
+    </mat-form-field><br>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions>

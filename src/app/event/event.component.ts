@@ -6,15 +6,14 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Evt } from 'src/models/Evt';
 import { EventService } from 'src/services/event.service';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { ModalEvtComponent } from '../modal-evt/modal-evt.component';
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
-export class EventComponent implements OnInit, AfterViewInit {
-
-
+export class EventComponent implements OnInit {
 
   constructor(private ES: EventService, private dialog: MatDialog) { }
 
@@ -51,11 +50,6 @@ export class EventComponent implements OnInit, AfterViewInit {
   }
 
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
-
 
   delete(id: String): void {
     let dialogRef = this.dialog.open(ConfirmDialogComponent, {
@@ -68,17 +62,28 @@ export class EventComponent implements OnInit, AfterViewInit {
         console.log(`Dialog result: ${result}`);
         if (result) {
           this.ES.delete(id).subscribe(() => {
-            this.ES.GetAllEvts().subscribe((a) => {
-              this.dataSource = new MatTableDataSource(a);
-              this.dataSource.paginator = this.paginator;
-              this.dataSource.sort = this.sort;
-            })
-          });
+            this.fetchData();
+          })
 
         }
       }
     )
+  }
+  //lancer l ouverture de la boite de MoodalEventCOmpo
+  open() {
+    let dialogRef = this.dialog.open(ModalEvtComponent)
+    dialogRef.afterClosed().subscribe(
+      data => {
+        if (data) {
+          console.log("Dialog output:", data);
 
+          this.ES.addEvent(data).subscribe(() => {
+            this.fetchData();
+          });
+        }
+
+      }
+    );
 
 
 

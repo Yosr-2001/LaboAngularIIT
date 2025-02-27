@@ -16,4 +16,7 @@ export class EventService {
   delete(id: String): Observable<void> {
     return this.http.delete<void>(`http://localhost:3000/evts/${id}`);
   }
+  addEvent(e: Evt): Observable<void> {
+    return this.http.post<void>(`http://localhost:3000/evts`, e);
+  }
 }
